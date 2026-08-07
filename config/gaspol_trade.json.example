@@ -1,0 +1,4 @@
+{
+  "stockbit_api_url": "https://api.stockbit.com/v2",
+  "stockbit_api_key": "YOUR_API_KEY_HERE"
+}

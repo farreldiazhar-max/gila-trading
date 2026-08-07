@@ -1,0 +1,376 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;background-color:#0f131c;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "text-primary": "#e2e8f0",
+                "surface-container": "#1c1f29",
+                "error-container": "#93000a",
+                "border-subtle": "rgba(148, 163, 184, 0.1)",
+                "tertiary-fixed": "#6bff8f",
+                "outline": "#8c909f",
+                "on-tertiary-container": "#003111",
+                "on-secondary-fixed-variant": "#3f465c",
+                "tertiary-container": "#00a74b",
+                "secondary-container": "#3f465c",
+                "surface": "#0f131c",
+                "bearish": "#ef4444",
+                "primary-container": "#4d8eff",
+                "glass-surface": "rgba(15, 23, 42, 0.8)",
+                "surface-bright": "#353943",
+                "on-error-container": "#ffdad6",
+                "surface-container-high": "#262a34",
+                "on-secondary": "#283044",
+                "on-tertiary-fixed": "#002109",
+                "primary-fixed": "#d8e2ff",
+                "on-surface": "#dfe2ef",
+                "inverse-surface": "#dfe2ef",
+                "on-tertiary": "#003915",
+                "on-primary-fixed": "#001a42",
+                "on-primary": "#002e6a",
+                "text-muted": "#94a3b8",
+                "surface-tint": "#adc6ff",
+                "secondary-fixed-dim": "#bec6e0",
+                "bullish": "#22c55e",
+                "surface-variant": "#31353f",
+                "on-surface-variant": "#c2c6d6",
+                "tertiary": "#4ae176",
+                "on-background": "#dfe2ef",
+                "primary": "#adc6ff",
+                "secondary": "#bec6e0",
+                "surface-container-low": "#181b25",
+                "primary-fixed-dim": "#adc6ff",
+                "on-primary-container": "#00285d",
+                "on-primary-fixed-variant": "#004395",
+                "warning": "#f59e0b",
+                "surface-container-highest": "#31353f",
+                "surface-dim": "#0f131c",
+                "on-secondary-container": "#adb4ce",
+                "secondary-fixed": "#dae2fd",
+                "on-tertiary-fixed-variant": "#005321",
+                "inverse-on-surface": "#2c303a",
+                "background": "#0f131c",
+                "inverse-primary": "#005ac2",
+                "on-error": "#690005",
+                "error": "#ffb4ab",
+                "tertiary-fixed-dim": "#4ae176",
+                "on-secondary-fixed": "#131b2e",
+                "surface-container-lowest": "#0a0e17",
+                "outline-variant": "#424754"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-page": "24px",
+                "gutter": "16px",
+                "card-padding": "20px",
+                "unit": "4px",
+                "table-row-height": "40px"
+        },
+        "fontFamily": {
+                "status-badge": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Inter"
+                ],
+                "data-mono": [
+                        "JetBrains Mono"
+                ],
+                "headline-sm": [
+                        "Inter"
+                ],
+                "label-caps": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "status-badge": [
+                        "11px",
+                        {
+                                "lineHeight": "1",
+                                "fontWeight": "800"
+                        }
+                ],
+                "body-md": [
+                        "14px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "data-mono": [
+                        "14px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "1",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface z-50 flex flex-col border-r border-border-subtle"><div class="p-6 flex items-center gap-3 mb-4"><img alt="SahamPintar Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOsYBCeOqI035GoUK9ycmCPgYF8zPyZK3juBUzrml17UnFeFa33KClrf6zkX13xjnFpxtQvMBnclSQdjwKyMHUkCInaKn4lpl3b9d8gcs7BOP4NISoI43Zo4qjdZQRmGpka71xVkWbORb6tuoy_xqL8WixMuHRYt4o_DQVMObN-nSvLHRLtMBc73vKQbhfzYtBHxLEklMe6jC7LMESvBXrXgfGCTpjz89fRoBovE2WJobxUxld1kxPWw"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">SahamPintar</span></div><nav class="flex-1 px-3 space-y-1" data-active-classes="bg-surface-container-high text-on-surface font-bold border-l-2 border-primary"><a class="flex items-center px-4 py-2.5 rounded-lg text-text-muted hover:bg-surface-container hover:text-on-surface transition-all group" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard</span><span class="font-body-md">Dashboard</span></a><a aria-current="page" class="flex items-center px-4 py-2.5 rounded-lg transition-all group bg-surface-container-high text-on-surface font-bold border-l-2 border-primary" data-path="screener" href="#"><span class="material-symbols-outlined mr-3 text-[20px] text-primary">filter_list</span><span class="font-body-md">Screener</span></a><a class="flex items-center px-4 py-2.5 rounded-lg text-text-muted hover:bg-surface-container hover:text-on-surface transition-all group" data-path="analysis" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">insights</span><span class="font-body-md">Analysis</span></a><a class="flex items-center px-4 py-2.5 rounded-lg text-text-muted hover:bg-surface-container hover:text-on-surface transition-all group" data-path="signals" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">sensors</span><span class="font-body-md">Signals</span></a><a class="flex items-center px-4 py-2.5 rounded-lg text-text-muted hover:bg-surface-container hover:text-on-surface transition-all group" data-path="logbook" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">menu_book</span><span class="font-body-md">Logbook</span></a><a class="flex items-center px-4 py-2.5 rounded-lg text-text-muted hover:bg-surface-container hover:text-on-surface transition-all group" data-path="portfolio" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">account_balance_wallet</span><span class="font-body-md">Portfolio</span></a><a class="flex items-center px-4 py-2.5 rounded-lg text-text-muted hover:bg-surface-container hover:text-on-surface transition-all group" data-path="backtest" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">history</span><span class="font-body-md">Backtest</span></a><a class="flex items-center px-4 py-2.5 rounded-lg text-text-muted hover:bg-surface-container hover:text-on-surface transition-all group" data-path="settings" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">settings</span><span class="font-body-md">Settings</span></a></nav></aside><div class="pl-64 w-full min-h-screen flex flex-col"><header class="fixed top-0 left-64 right-0 h-14 bg-surface border-b border-border-subtle z-40 flex items-center justify-end px-6 gap-6"><div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container-lowest rounded-full border border-border-subtle"><span class="w-1.5 h-1.5 rounded-full bg-bullish animate-pulse"></span><span class="text-[10px] font-bold text-bullish tracking-wider">MARKET OPEN</span></div><button class="text-text-muted hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="flex items-center gap-3 pl-4 border-l border-border-subtle"><div class="text-right"><div class="text-[13px] font-medium text-on-surface">Trader Alpha</div><div class="text-[10px] font-bold text-primary">PRO ACCOUNT</div></div><img alt="Profile" class="w-7 h-7 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUmNEsk2ROzU9vGPnxOLesQ7KJZThCfsBpB4GiASiTPLc7e8WL7HBVzGyfk-sZpON9oehB75_MYoHwzUzxlOy5TH9amw_rim-iEREBc0sD23u-wjFrpPDlPHFx4vUdOGaCbLhURvugNhRXARGm9YPnqwj3bNLItiTCVJLpPm_j_yjjHdZMfQ9piJ1TYO2IpcF2iKRsKSoAjXLeDPVvl3MXbK3U2tVNR3iFTNPKR9JdmTANoskMeDaOWw"/></div></header><main class="flex-1 pt-14 bg-background"><div class="flex flex-col w-full px-6 py-6 gap-4">
+<div class="flex items-end justify-between w-full">
+<div>
+<h1 class="font-headline-sm text-[22px] font-semibold text-on-surface mb-1">Screener</h1>
+<p class="text-[13px] text-text-muted">Filter and discover high-potential equities based on custom technical and fundamental criteria.</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-lowest border border-border-subtle text-text-muted hover:text-on-surface hover:bg-surface-container transition-colors text-[13px]">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span class="font-medium">Save Preset</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-bullish/10 border border-bullish/30 text-bullish font-medium hover:bg-bullish/20 transition-colors text-[13px]">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Run Screener</span>
+</button>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-lg border border-border-subtle p-4 flex flex-col gap-4">
+<div class="flex items-center justify-between border-b border-border-subtle pb-3">
+<div class="flex items-center gap-2">
+<h2 class="text-[14px] font-semibold text-on-surface uppercase tracking-wider">Active Filters</h2>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold border border-primary/20">4 APPLIED</span>
+</div>
+<button class="text-text-muted hover:text-on-surface transition-colors text-[12px]">Clear All</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+<div class="flex flex-col gap-1.5">
+<label class="text-[10px] font-bold text-text-muted uppercase tracking-wider">SECTOR</label>
+<div class="flex items-center justify-between px-2.5 py-1.5 bg-surface-container-lowest border border-border-subtle rounded cursor-pointer hover:border-primary/50 transition-colors">
+<span class="text-[13px] text-on-surface">Financials, Tech...</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">arrow_drop_down</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[10px] font-bold text-text-muted uppercase tracking-wider">MARKET CAP (IDR)</label>
+<div class="flex items-center justify-between px-2.5 py-1.5 bg-surface-container-lowest border border-border-subtle rounded cursor-pointer hover:border-primary/50 transition-colors">
+<span class="font-data-mono text-[13px] text-on-surface">&gt; 10 Trillion</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">arrow_drop_down</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[10px] font-bold text-text-muted uppercase tracking-wider">PE RATIO</label>
+<div class="flex items-center justify-between px-2.5 py-1.5 bg-surface-container-lowest border border-border-subtle rounded cursor-pointer hover:border-primary/50 transition-colors">
+<span class="font-data-mono text-[13px] text-on-surface">&lt; 15.0x</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">arrow_drop_down</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[10px] font-bold text-text-muted uppercase tracking-wider">RSI (14)</label>
+<div class="flex items-center justify-between px-2.5 py-1.5 bg-surface-container-lowest border border-border-subtle rounded cursor-pointer hover:border-primary/50 transition-colors">
+<span class="font-data-mono text-[13px] text-on-surface">&lt; 30 (Oversold)</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 px-2.5 py-1 rounded border border-dashed border-border-subtle text-text-muted hover:text-on-surface hover:border-outline transition-colors text-[12px]">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add Filter</span>
+</button>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-lg border border-border-subtle overflow-hidden flex flex-col">
+<div class="flex items-center justify-between px-4 py-3 border-b border-border-subtle bg-surface-container-lowest/50">
+<div class="flex items-center gap-3">
+<h2 class="text-[14px] font-semibold text-on-surface uppercase tracking-wider">Screening Results</h2>
+<span class="text-[12px] text-text-muted">14 Matches Found</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-text-muted text-[16px]">search</span>
+<input class="w-48 pl-8 pr-2.5 py-1 bg-surface-container-lowest border border-border-subtle rounded text-[12px] text-on-surface focus:outline-none focus:border-primary transition-all placeholder:text-text-muted/50" placeholder="Search ticker..." type="text"/>
+</div>
+<button class="p-1 rounded text-text-muted hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Export CSV">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left whitespace-nowrap">
+<thead>
+<tr class="border-b border-border-subtle bg-surface-container-lowest/30">
+<th class="px-4 py-2 text-[10px] font-bold text-text-muted uppercase tracking-wider w-16">TICKER</th>
+<th class="px-4 py-2 text-[10px] font-bold text-text-muted uppercase tracking-wider">COMPANY</th>
+<th class="px-4 py-2 text-[10px] font-bold text-text-muted uppercase tracking-wider text-right">LAST PRICE</th>
+<th class="px-4 py-2 text-[10px] font-bold text-text-muted uppercase tracking-wider text-right">% CHANGE</th>
+<th class="px-4 py-2 text-[10px] font-bold text-text-muted uppercase tracking-wider text-right">VOLUME</th>
+<th class="px-4 py-2 text-[10px] font-bold text-text-muted uppercase tracking-wider text-right">RSI (14)</th>
+<th class="px-4 py-2 text-[10px] font-bold text-text-muted uppercase tracking-wider text-center">SIGNAL</th>
+<th class="px-4 py-2 text-[10px] font-bold text-text-muted uppercase tracking-wider text-center w-24">ACTIONS</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle">
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-4 py-2.5">
+<span class="font-data-mono text-[13px] text-on-surface font-semibold">BBCA</span>
+</td>
+<td class="px-4 py-2.5">
+<span class="text-[13px] text-text-muted truncate max-w-[150px] inline-block">Bank Central Asia Tbk</span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-on-surface">9,850</span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-bullish flex items-center justify-end gap-0.5">
++1.25%
+                        </span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-on-surface">45.2M</span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-warning">28.4</span>
+</td>
+<td class="px-4 py-2.5 text-center">
+<span class="text-[11px] font-bold text-bullish tracking-wider">STRONG BUY</span>
+</td>
+<td class="px-4 py-2.5 text-center">
+<div class="flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-text-muted hover:bg-surface-container-highest hover:text-on-surface transition-colors" title="Add to Watchlist">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+</button>
+<button class="p-1 rounded text-text-muted hover:bg-surface-container-highest hover:text-on-surface transition-colors" title="View Analysis">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-4 py-2.5">
+<span class="font-data-mono text-[13px] text-on-surface font-semibold">TLKM</span>
+</td>
+<td class="px-4 py-2.5">
+<span class="text-[13px] text-text-muted truncate max-w-[150px] inline-block">Telkom Indonesia</span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-on-surface">3,210</span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-bearish flex items-center justify-end gap-0.5">
+-0.85%
+                        </span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-on-surface">112.5M</span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-warning">25.1</span>
+</td>
+<td class="px-4 py-2.5 text-center">
+<span class="text-[11px] font-bold text-bullish tracking-wider">BUY</span>
+</td>
+<td class="px-4 py-2.5 text-center">
+<div class="flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-text-muted hover:bg-surface-container-highest hover:text-on-surface transition-colors" title="Add to Watchlist">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+</button>
+<button class="p-1 rounded text-text-muted hover:bg-surface-container-highest hover:text-on-surface transition-colors" title="View Analysis">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-4 py-2.5">
+<span class="font-data-mono text-[13px] text-on-surface font-semibold">GOTO</span>
+</td>
+<td class="px-4 py-2.5">
+<span class="text-[13px] text-text-muted truncate max-w-[150px] inline-block">GoTo Gojek Tokopedia</span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-on-surface">54</span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-bullish flex items-center justify-end gap-0.5">
++3.84%
+                        </span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-on-surface">1.2B</span>
+</td>
+<td class="px-4 py-2.5 text-right">
+<span class="font-data-mono text-[13px] text-text-muted">29.8</span>
+</td>
+<td class="px-4 py-2.5 text-center">
+<span class="text-[11px] font-bold text-text-muted tracking-wider">NEUTRAL</span>
+</td>
+<td class="px-4 py-2.5 text-center">
+<div class="flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-text-muted hover:bg-surface-container-highest hover:text-on-surface transition-colors" title="Add to Watchlist">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+</button>
+<button class="p-1 rounded text-text-muted hover:bg-surface-container-highest hover:text-on-surface transition-colors" title="View Analysis">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-4 py-3 border-t border-border-subtle flex items-center justify-between bg-surface-container-lowest/50">
+<span class="text-[12px] text-text-muted">Showing 1 to 3 of 14 entries</span>
+<div class="flex gap-1">
+<button class="px-2 py-1 rounded border border-border-subtle text-text-muted hover:bg-surface-container-high hover:text-on-surface disabled:opacity-50 text-[12px]" disabled="">Prev</button>
+<button class="px-2 py-1 rounded bg-surface-container-high border border-border-subtle text-on-surface text-[12px]">1</button>
+<button class="px-2 py-1 rounded border border-border-subtle text-text-muted hover:bg-surface-container-high hover:text-on-surface text-[12px]">2</button>
+<button class="px-2 py-1 rounded border border-border-subtle text-text-muted hover:bg-surface-container-high hover:text-on-surface text-[12px]">Next</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

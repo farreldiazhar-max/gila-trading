@@ -1,0 +1,38 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PHP / web app runtime
+/cache/
+/runtime/
+/tmp/
+
+# Logs
+*.log
+
+# Environment/config secrets
+.env
+.env.*
+config/*.local.php
+config/*.php.bak
+
+# Uploads / generated content
+uploads/
+public/uploads/
+
+# Composer / dependencies (if used later)
+/vendor/
+
+# Test / coverage outputs
+coverage/
+.phpunit.result.cache
+
+# Backup files
+*.bak
+*.tmp

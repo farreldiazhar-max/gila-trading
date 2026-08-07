@@ -1,0 +1,368 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;background-color:#0a0e17;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "text-primary": "#e2e8f0",
+                "surface-container": "#1c1f29",
+                "error-container": "#93000a",
+                "border-subtle": "rgba(148, 163, 184, 0.1)",
+                "tertiary-fixed": "#6bff8f",
+                "outline": "#8c909f",
+                "on-tertiary-container": "#003111",
+                "on-secondary-fixed-variant": "#3f465c",
+                "tertiary-container": "#00a74b",
+                "secondary-container": "#3f465c",
+                "surface": "#0f131c",
+                "bearish": "#ef4444",
+                "primary-container": "#4d8eff",
+                "glass-surface": "rgba(15, 23, 42, 0.8)",
+                "surface-bright": "#353943",
+                "on-error-container": "#ffdad6",
+                "surface-container-high": "#262a34",
+                "on-secondary": "#283044",
+                "on-tertiary-fixed": "#002109",
+                "primary-fixed": "#d8e2ff",
+                "on-surface": "#dfe2ef",
+                "inverse-surface": "#dfe2ef",
+                "on-tertiary": "#003915",
+                "on-primary-fixed": "#001a42",
+                "on-primary": "#002e6a",
+                "text-muted": "#94a3b8",
+                "surface-tint": "#adc6ff",
+                "secondary-fixed-dim": "#bec6e0",
+                "bullish": "#22c55e",
+                "surface-variant": "#31353f",
+                "on-surface-variant": "#c2c6d6",
+                "tertiary": "#4ae176",
+                "on-background": "#dfe2ef",
+                "primary": "#adc6ff",
+                "secondary": "#bec6e0",
+                "surface-container-low": "#181b25",
+                "primary-fixed-dim": "#adc6ff",
+                "on-primary-container": "#00285d",
+                "on-primary-fixed-variant": "#004395",
+                "warning": "#f59e0b",
+                "surface-container-highest": "#31353f",
+                "surface-dim": "#0f131c",
+                "on-secondary-container": "#adb4ce",
+                "secondary-fixed": "#dae2fd",
+                "on-tertiary-fixed-variant": "#005321",
+                "inverse-on-surface": "#2c303a",
+                "background": "#0f131c",
+                "inverse-primary": "#005ac2",
+                "on-error": "#690005",
+                "error": "#ffb4ab",
+                "tertiary-fixed-dim": "#4ae176",
+                "on-secondary-fixed": "#131b2e",
+                "surface-container-lowest": "#0a0e17",
+                "outline-variant": "#424754"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-page": "24px",
+                "gutter": "16px",
+                "card-padding": "20px",
+                "unit": "4px",
+                "table-row-height": "40px"
+        },
+        "fontFamily": {
+                "status-badge": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Inter"
+                ],
+                "data-mono": [
+                        "JetBrains Mono"
+                ],
+                "headline-sm": [
+                        "Inter"
+                ],
+                "label-caps": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "status-badge": [
+                        "11px",
+                        {
+                                "lineHeight": "1",
+                                "fontWeight": "800"
+                        }
+                ],
+                "body-md": [
+                        "14px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "data-mono": [
+                        "14px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "1",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col border-r border-border-subtle"><div class="p-6 flex items-center gap-3 mb-4"><img alt="SahamPintar Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOsYBCeOqI035GoUK9ycmCPgYF8zPyZK3juBUzrml17UnFeFa33KClrf6zkX13xjnFpxtQvMBnclSQdjwKyMHUkCInaKn4lpl3b9d8gcs7BOP4NISoI43Zo4qjdZQRmGpka71xVkWbORb6tuoy_xqL8WixMuHRYt4o_DQVMObN-nSvLHRLtMBc73vKQbhfzYtBHxLEklMe6jC7LMESvBXrXgfGCTpjz89fRoBovE2WJobxUxld1kxPWw"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">SahamPintar</span></div><nav class="flex-1 px-3 space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-bold"><a class="flex items-center px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3 text-lg">dashboard</span><span class="font-body-md font-medium">Dashboard</span></a><a class="flex items-center px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="screener" href="#"><span class="material-symbols-outlined mr-3 text-lg">filter_list</span><span class="font-body-md font-medium">Screener</span></a><a aria-current="page" class="flex items-center px-4 py-3 rounded-lg transition-all group bg-surface-container text-primary font-bold border border-primary/20 shadow-[0_0_10px_rgba(77,142,255,0.1)]" data-path="analysis" href="#"><span class="material-symbols-outlined mr-3 text-lg">insights</span><span class="font-body-md font-medium">Analysis</span></a><a class="flex items-center px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="signals" href="#"><span class="material-symbols-outlined mr-3 text-lg">sensors</span><span class="font-body-md font-medium">Signals</span></a><a class="flex items-center px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="logbook" href="#"><span class="material-symbols-outlined mr-3 text-lg">menu_book</span><span class="font-body-md font-medium">Logbook</span></a><a class="flex items-center px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="portfolio" href="#"><span class="material-symbols-outlined mr-3 text-lg">account_balance_wallet</span><span class="font-body-md font-medium">Portfolio</span></a><a class="flex items-center px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="backtest" href="#"><span class="material-symbols-outlined mr-3 text-lg">history</span><span class="font-body-md font-medium">Backtest</span></a><a class="flex items-center px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="settings" href="#"><span class="material-symbols-outlined mr-3 text-lg">settings</span><span class="font-body-md font-medium">Settings</span></a></nav></aside><div class="pl-64 w-full min-h-screen flex flex-col"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest border-b border-border-subtle z-40 flex items-center justify-end px-8 gap-6"><div class="flex items-center gap-2 px-3 py-1 bg-surface-container border border-border-subtle rounded"><span class="w-1.5 h-1.5 rounded-full bg-bullish animate-pulse"></span><span class="text-[10px] font-label-caps text-on-surface-variant tracking-wider">MARKET OPEN</span></div><button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">notifications</span></button><div class="flex items-center gap-3 pl-4 border-l border-border-subtle"><div class="text-right"><div class="text-body-md font-medium text-on-surface">Trader Alpha</div><div class="text-[10px] font-status-badge text-primary tracking-wider">PRO ACCOUNT</div></div><img alt="Profile" class="w-8 h-8 rounded-full border border-border-subtle object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUmNEsk2ROzU9vGPnxOLesQ7KJZThCfsBpB4GiASiTPLc7e8WL7HBVzGyfk-sZpON9oehB75_MYoHwzUzxlOy5TH9amw_rim-iEREBc0sD23u-wjFrpPDlPHFx4vUdOGaCbLhURvugNhRXARGm9YPnqwj3bNLItiTCVJLpPm_j_yjjHdZMfQ9piJ1TYO2IpcF2iKRsKSoAjXLeDPVvl3MXbK3U2tVNR3iFTNPKR9JdmTANoskMeDaOWw"/></div></header><main class="flex-1 pt-16 bg-[#0B0E14]"><div class="flex flex-col w-full px-6 py-6 gap-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<div class="flex items-center gap-3 mb-1">
+<h1 class="text-4xl font-bold text-on-surface tracking-tight">BBCA.JK</h1>
+<span class="px-2 py-0.5 rounded bg-surface-container border border-border-subtle text-[10px] font-label-caps text-on-surface-variant">IDX</span>
+</div>
+<p class="font-body-md text-text-muted">Bank Central Asia Tbk.</p>
+</div>
+<div class="flex items-end gap-6">
+<div class="text-right">
+<div class="text-4xl font-bold text-on-surface tracking-tight">Rp 9,850</div>
+<div class="font-data-mono text-bullish flex items-center justify-end gap-1 mt-1 text-sm bg-bullish/10 px-2 py-0.5 rounded inline-flex">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+          +125 (+1.28%)
+        </div>
+</div>
+<button class="px-6 py-3 bg-surface-container border border-outline hover:border-primary text-on-surface rounded font-label-caps text-sm transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span> ADD TO WATCHLIST
+      </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<div class="lg:col-span-8 flex flex-col gap-6">
+<div class="bg-surface-container-lowest rounded-lg border border-border-subtle p-5 flex flex-col h-[600px] shadow-sm relative overflow-hidden">
+<div class="flex justify-between items-center mb-6 relative z-10 border-b border-border-subtle pb-4">
+<div class="flex gap-1 bg-surface-container rounded p-1">
+<button class="px-4 py-1.5 rounded bg-surface-bright text-on-surface text-xs font-medium shadow-sm">1D</button>
+<button class="px-4 py-1.5 rounded text-on-surface-variant text-xs font-medium hover:bg-surface-bright transition-colors">1W</button>
+<button class="px-4 py-1.5 rounded text-on-surface-variant text-xs font-medium hover:bg-surface-bright transition-colors">1M</button>
+</div>
+<div class="flex gap-4 items-center">
+<div class="flex items-center gap-2 text-xs font-medium text-on-surface-variant bg-surface-container px-3 py-1.5 rounded border border-border-subtle">
+<div class="w-2 h-2 rounded-full bg-primary"></div> MA(50)
+             </div>
+<div class="flex items-center gap-2 text-xs font-medium text-on-surface-variant bg-surface-container px-3 py-1.5 rounded border border-border-subtle">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div> MA(200)
+             </div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1.5 hover:bg-surface-container rounded">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+</div>
+</div>
+<div class="flex-1 w-full relative group">
+<div class="absolute inset-0 bg-gradient-to-t from-bullish/5 to-transparent pointer-events-none"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-surface-lowest/50 backdrop-blur-sm z-20">
+<div class="px-4 py-2 bg-surface-container border border-border-subtle rounded flex items-center gap-2 shadow-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">bar_chart</span>
+<span class="font-data-mono text-xs text-on-surface">Interactive Chart Enabled</span>
+</div>
+</div>
+<svg class="w-full h-full text-surface-container-high/30" preserveaspectratio="none" viewbox="0 0 800 400">
+<!-- Grid Lines -->
+<path d="M0 100 L800 100 M0 200 L800 200 M0 300 L800 300" fill="none" stroke="currentColor" stroke-dasharray="2 4" stroke-width="1"></path>
+<path d="M200 0 L200 400 M400 0 L400 400 M600 0 L600 400" fill="none" stroke="currentColor" stroke-dasharray="2 4" stroke-width="1"></path>
+<!-- MA 200 Line -->
+<path d="M0 250 Q100 240 200 260 T400 220 T600 180 T800 190" fill="none" opacity="0.3" stroke="theme('colors.tertiary')" stroke-width="1.5"></path>
+<!-- MA 50 Line -->
+<path d="M0 280 Q100 260 200 220 T400 150 T600 100 T800 50" fill="none" opacity="0.6" stroke="theme('colors.primary')" stroke-width="1.5"></path>
+<!-- Main Price Line & Fill (TradingView / Robinhood style) -->
+<path d="M0 320 L50 250 L100 260 L150 210 L200 180 L250 170 L300 140 L350 100 L400 120 L450 80 L500 90 L550 50 L600 60 L650 30 L700 40 L750 10 L800 20" fill="none" stroke="theme('colors.bullish')" stroke-width="2.5"></path>
+<!-- Candles (Subtle overlay for detail) -->
+<g opacity="0.8" stroke-width="1">
+<!-- Up Candle -->
+<line stroke="theme('colors.bullish')" x1="50" x2="50" y1="280" y2="220"></line>
+<rect fill="theme('colors.bullish')" height="30" width="4" x="48" y="240"></rect>
+<!-- Down Candle -->
+<line stroke="theme('colors.bearish')" x1="100" x2="100" y1="230" y2="290"></line>
+<rect fill="theme('colors.bearish')" height="40" width="4" x="98" y="240"></rect>
+<!-- Up Candle -->
+<line stroke="theme('colors.bullish')" x1="150" x2="150" y1="260" y2="180"></line>
+<rect fill="theme('colors.bullish')" height="50" width="4" x="148" y="200"></rect>
+<!-- Up Candle -->
+<line stroke="theme('colors.bullish')" x1="200" x2="200" y1="220" y2="150"></line>
+<rect fill="theme('colors.bullish')" height="40" width="4" x="198" y="160"></rect>
+<!-- Down Candle -->
+<line stroke="theme('colors.bearish')" x1="250" x2="250" y1="140" y2="200"></line>
+<rect fill="theme('colors.bearish')" height="30" width="4" x="248" y="160"></rect>
+<!-- Up Candle -->
+<line stroke="theme('colors.bullish')" x1="300" x2="300" y1="200" y2="120"></line>
+<rect fill="theme('colors.bullish')" height="60" width="4" x="298" y="130"></rect>
+<!-- Up Candle -->
+<line stroke="theme('colors.bullish')" x1="350" x2="350" y1="150" y2="80"></line>
+<rect fill="theme('colors.bullish')" height="40" width="4" x="348" y="100"></rect>
+</g>
+</svg>
+</div>
+</div>
+<!-- Indicators Section -->
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest rounded-lg border border-border-subtle p-5 h-32 flex flex-col justify-between hover:border-outline/50 transition-colors group">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-on-surface-variant tracking-wider">RSI (14)</span>
+<span class="font-data-mono text-sm text-on-surface group-hover:text-primary transition-colors bg-surface-container px-2 py-0.5 rounded border border-border-subtle">68.5</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden relative mb-1">
+<div class="absolute inset-y-0 left-[30%] right-[30%] bg-surface-container-low border-x border-border-subtle"></div>
+<div class="h-full bg-primary rounded-full relative z-10 shadow-[0_0_8px_rgba(173,198,255,0.6)]" style="width: 68.5%;"></div>
+</div>
+<div class="flex justify-between text-[10px] text-text-muted font-medium uppercase tracking-wider">
+<span>Oversold</span>
+<span>Overbought</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg border border-border-subtle p-5 h-32 flex flex-col justify-between hover:border-outline/50 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-on-surface-variant tracking-wider">MACD (12,26,9)</span>
+<span class="font-data-mono text-bullish flex items-center gap-1 text-xs bg-bullish/10 px-2 py-0.5 rounded border border-bullish/20"><span class="material-symbols-outlined text-[14px]">trending_up</span> Bullish Cross</span>
+</div>
+<svg class="w-full h-12 text-surface-container-highest" preserveaspectratio="none" viewbox="0 0 200 40">
+<path d="M0 20 L200 20" stroke="currentColor" stroke-width="1"></path>
+<g fill="theme('colors.bullish')" opacity="0.4">
+<rect height="5" width="3" x="10" y="15"></rect>
+<rect height="10" width="3" x="20" y="10"></rect>
+<rect height="15" width="3" x="30" y="5"></rect>
+<rect height="12" width="3" x="40" y="8"></rect>
+</g>
+<g fill="theme('colors.bullish')" opacity="0.9">
+<rect height="5" width="3" x="150" y="15"></rect>
+<rect height="10" width="3" x="160" y="10"></rect>
+<rect height="15" width="3" x="170" y="5"></rect>
+<rect height="18" width="3" x="180" y="2"></rect>
+</g>
+<path d="M0 30 Q50 40 100 20 T200 5" fill="none" stroke="theme('colors.primary')" stroke-width="1.5"></path>
+<path d="M0 25 Q50 30 100 25 T200 15" fill="none" stroke="theme('colors.tertiary')" stroke-dasharray="2 2" stroke-width="1"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Trading Recommendation -->
+<div class="bg-surface-container-lowest rounded-lg border border-bullish/30 p-5 relative overflow-hidden shadow-[0_0_15px_rgba(34,197,94,0.05)]">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-[100px] text-bullish">rocket_launch</span>
+</div>
+<div class="relative z-10">
+<h2 class="text-xs font-bold text-on-surface-variant mb-3 tracking-wider">AI RECOMMENDATION</h2>
+<div class="flex items-end gap-3 mb-5">
+<span class="text-3xl font-bold text-bullish tracking-tight">STRONG BUY</span>
+</div>
+<div class="flex flex-col gap-1.5 mb-6 bg-surface-container rounded p-3 border border-border-subtle">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant font-medium">Confidence Score</span>
+<span class="font-data-mono text-bullish font-bold">88%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden mt-1">
+<div class="h-full bg-bullish rounded-full shadow-[0_0_5px_rgba(34,197,94,0.5)]" style="width: 88%;"></div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center py-1.5 border-b border-border-subtle">
+<span class="text-xs font-medium text-text-muted tracking-wide">ENTRY RANGE</span>
+<span class="font-data-mono text-on-surface text-sm">9,800 - 9,850</span>
+</div>
+<div class="flex justify-between items-center py-1.5 border-b border-border-subtle">
+<span class="text-xs font-medium text-text-muted tracking-wide">TARGET 1</span>
+<span class="font-data-mono text-primary text-sm">10,200</span>
+</div>
+<div class="flex justify-between items-center py-1.5 border-b border-border-subtle">
+<span class="text-xs font-medium text-text-muted tracking-wide">TARGET 2</span>
+<span class="font-data-mono text-primary text-sm">10,500</span>
+</div>
+<div class="flex justify-between items-center py-1.5 border-b border-border-subtle">
+<span class="text-xs font-medium text-text-muted tracking-wide">STOP LOSS</span>
+<span class="font-data-mono text-bearish text-sm">9,600</span>
+</div>
+<div class="flex justify-between items-center pt-1.5">
+<span class="text-xs font-medium text-text-muted tracking-wide">RISK/REWARD</span>
+<span class="font-data-mono text-bullish font-medium border border-bullish/30 bg-bullish/10 px-2 py-0.5 rounded text-xs">1 : 2.6</span>
+</div>
+</div>
+<button class="w-full mt-6 py-3.5 bg-bullish hover:bg-bullish/90 text-surface-container-lowest rounded font-bold text-sm transition-all shadow-[0_0_15px_rgba(34,197,94,0.3)] flex items-center justify-center gap-2">
+                EXECUTE TRADE <span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+</div>
+<!-- Technical Narrative -->
+<div class="bg-surface-container-lowest rounded-lg border border-border-subtle p-5">
+<h3 class="text-xs font-bold text-on-surface-variant mb-3 tracking-wider uppercase">Technical Narrative</h3>
+<p class="font-body-md text-text-muted leading-relaxed text-sm">
+             Harga baru saja menembus resistensi psikologis di 9,800 dengan volume yang solid, terkonfirmasi oleh <strong class="text-primary font-medium">Golden Cross</strong> pada MA50 dan MA200. MACD menunjukkan divergensi positif sementara RSI mulai masuk ke zona uptrend kuat tanpa indikasi overbought yang berlebihan. Momentum bullish diprediksi berlanjut menuju level ATH baru.
+         </p>
+</div>
+<!-- Fundamental Summary -->
+<div class="bg-surface-container-lowest rounded-lg border border-border-subtle p-5">
+<h3 class="text-xs font-bold text-on-surface-variant mb-4 tracking-wider uppercase">Fundamental Snapshot</h3>
+<div class="grid grid-cols-3 gap-2">
+<div class="flex flex-col gap-1 bg-surface-container p-3 rounded border border-border-subtle">
+<span class="text-[10px] font-bold text-text-muted uppercase tracking-wider">PER</span>
+<span class="font-data-mono text-on-surface text-sm">24.5x</span>
+</div>
+<div class="flex flex-col gap-1 bg-surface-container p-3 rounded border border-border-subtle">
+<span class="text-[10px] font-bold text-text-muted uppercase tracking-wider">PBV</span>
+<span class="font-data-mono text-on-surface text-sm">5.2x</span>
+</div>
+<div class="flex flex-col gap-1 bg-surface-container p-3 rounded border border-border-subtle">
+<span class="text-[10px] font-bold text-text-muted uppercase tracking-wider">ROE</span>
+<span class="font-data-mono text-bullish text-sm font-medium">22.4%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
