@@ -3,15 +3,34 @@
 
 define('APP_NAME', 'Gila Trading');
 define('APP_VERSION', '1.0.0');
-// Dynamic Base URL detection
+// Dynamic Base URL detection (supports reverse proxies like Render/Fly)
 if (!defined('BASE_URL')) {
-    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
-    $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost:8000';
-    $scriptDir = rtrim(dirname($_SERVER['SCRIPT_NAME'] ?? ''), '/\\');
+    // Prefer forwarded proto when present (Render, Fly, proxies)
+    $isHttps = false;
+    if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') {
+        $isHttps = true;
+    }
+    if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https') {
+        $isHttps = true;
+    }
+    if (!empty($_SERVER['HTTP_X_FORWARDED_SSL']) && strtolower($_SERVER['HTTP_X_FORWARDED_SSL']) === 'on') {
+        $isHttps = true;
+    }
+    $protocol = $isHttps ? 'https://' : 'http://';
+
+    $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : (isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'localhost:8000');
+
+    // Determine script directory and normalize path
+    $scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
+    $scriptDir = rtrim(dirname($scriptName), '/\\');
+    // If running from inside /pages folder, remove that segment
     if (substr($scriptDir, -6) === '/pages') {
         $scriptDir = substr($scriptDir, 0, -6);
     }
+
     $baseUrl = $protocol . $host . ($scriptDir ? $scriptDir : '') . '/';
+    // Ensure no double-slashes
+    $baseUrl = preg_replace('#([^:]/)/+#', '$1/', $baseUrl);
     define('BASE_URL', $baseUrl);
 }
 
